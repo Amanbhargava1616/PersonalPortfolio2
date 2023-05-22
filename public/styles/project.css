@@ -1,0 +1,101 @@
+a {
+	text-decoration: none;
+	color: #06283d !important;
+}
+
+body {
+	background-color: #dff6ff;
+	color: #06283d;
+}
+
+.projectData {
+	padding: 0 20px;
+	margin-bottom: 30px;
+}
+
+.projectName {
+	font-family: "Caveat", cursive;
+	font-weight: 700;
+	font-size: 3rem;
+}
+
+.projectdescription {
+	font-weight: 500;
+	font-size: 1.25rem;
+}
+
+.techStack {
+	display: flex;
+}
+
+.techItem {
+	border: 2px gray solid;
+	border-radius: 15px;
+	padding: 5px 10px;
+	display: grid;
+	width: fit-content;
+	place-content: center;
+	transition: all 0.5s;
+	color: #333;
+}
+
+.techItem:hover {
+	box-shadow: #666 3px 3px 5px;
+}
+
+#visitProject {
+	--color: #15518a;
+	--color2: rgb(10, 25, 30);
+	padding: 1rem 1.75rem;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 2px solid var(--color);
+	transition: 0.5s;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 1;
+	font-weight: 500;
+	font-size: 17px;
+	font-family: "Roboto", "Segoe UI", sans-serif;
+	text-transform: uppercase;
+	color: var(--color);
+}
+
+#visitProject::after,
+#visitProject::before {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	transform: skew(90deg) translate(-50%, -50%);
+	position: absolute;
+	inset: 50%;
+	left: 25%;
+	z-index: -1;
+	transition: 0.5s ease-out;
+	background-color: var(--color);
+}
+
+#visitProject::before {
+	top: -50%;
+	left: -25%;
+	transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#visitProject:hover::before {
+	transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#visitProject:hover::after {
+	transform: skew(45deg) translate(-50%, -50%);
+}
+
+#visitProject:hover {
+	color: white;
+}
+
+#visitProject:active {
+	filter: brightness(0.7);
+	transform: scale(0.98);
+}

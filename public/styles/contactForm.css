@@ -1,0 +1,208 @@
+/* Contact Us */
+#contact_div {
+	background-color: #72baec;
+	padding: 40px;
+}
+
+#contact_div .row {
+	position: relative;
+	padding: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
+	min-height: 670px;
+	background-color: white;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+#contact_div .col-lg-6 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+#contact_div .contact_link_div {
+	background-color: #15518a;
+	position: absolute;
+	padding: 30px 0;
+	left: -7%;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 10px;
+	min-width: 300px;
+}
+
+#contact_div .heading_1 {
+	font-size: 2rem;
+	font-family: "Playfair Display", serif;
+	font-weight: 700;
+	color: white;
+}
+
+.contact_link_div a {
+	color: rgb(228, 241, 255) !important;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+#contact_div .heading_2 {
+	font-size: 2rem;
+	font-family: "Playfair Display", serif;
+	font-weight: 700;
+	color: #15518a;
+}
+
+#contact_div form {
+	width: 300px;
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#contact_div input,
+#contact_div textarea {
+	background-color: transparent;
+	border: none;
+	border-bottom: #524646 solid 3px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	box-shadow: none !important;
+}
+
+label.error {
+	color: rgb(254, 4, 4);
+}
+
+/* From uiverse.io by @adamgiebl */
+#contact_div button {
+	font-family: inherit;
+	font-size: 20px;
+	background: royalblue;
+	color: white;
+	padding: 0.7em 1em;
+	padding-left: 0.9em;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.2s;
+}
+
+#contact_div button span {
+	display: block;
+	margin-left: 0.3em;
+	transition: all 0.3s ease-in-out;
+}
+
+#contact_div button svg {
+	display: block;
+	transform-origin: center center;
+	transition: transform 0.3s ease-in-out;
+}
+
+#contact_div button:hover .svg-wrapper {
+	animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+#contact_div button:hover svg {
+	transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+#contact_div button:hover span {
+	transform: translateX(5em);
+}
+
+#contact_div button:active {
+	transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+	from {
+		transform: translateY(0.1em);
+	}
+
+	to {
+		transform: translateY(-0.1em);
+	}
+}
+
+@media (max-width: 1200px) {
+	#contact_div .row {
+		position: relative;
+		max-width: 900px;
+	}
+
+	#contact_div .contact_link_div {
+		position: absolute;
+		left: -5%;
+	}
+}
+
+@media (max-width: 1024px) {
+	#contact_div .row {
+		position: relative;
+		max-width: 800px;
+	}
+
+	#contact_div iframe {
+		width: 300px !important;
+	}
+}
+
+@media (max-width: 992px) {
+	#contact_div .row {
+		all: unset;
+		padding: 40px;
+		max-width: 800px;
+		margin: 0 auto;
+		min-height: 602px;
+		background-color: white;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#contact_div .contact_link_div {
+		all: unset;
+		width: fit-content !important;
+		background-color: #15518a;
+		padding: 30px 20px;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto !important;
+	}
+
+	#contact_div iframe {
+		width: 350px !important;
+	}
+}
+
+@media (max-width: 550px) {
+	#contact_div iframe {
+		width: 200px !important;
+	}
+}
+
+@media (max-width: 425px) {
+	#contact_div form {
+		width: 100%;
+	}
+
+	#contact_div .row {
+		padding: 0 0 40px;
+	}
+
+	#contact_div {
+		padding: 40px;
+		background-color: white;
+	}
+}

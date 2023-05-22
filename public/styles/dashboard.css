@@ -1,0 +1,133 @@
+/* 
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Courgette', cursive;
+*/
+
+body {
+	background-color: whitesmoke;
+}
+
+a {
+	text-decoration: none;
+	color: black !important;
+}
+
+main,
+main .row {
+	margin: 0px !important;
+}
+
+.icon_div {
+	font-size: 1.5rem;
+	width: fit-content;
+	cursor: pointer;
+	height: fit-content;
+	margin: 15px 0;
+}
+
+.icon_img {
+	width: 40px;
+}
+
+.side_bar {
+	margin: 20px 0;
+}
+
+.side_bar > div {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.project_display {
+	width: 100%;
+	height: 750px;
+}
+
+.moral {
+	position: fixed;
+	width: fit-content;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px 10px;
+	background-color: white;
+	width: 300px;
+}
+
+#backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+}
+
+.account_div {
+	height: 260px;
+}
+
+#visitProject {
+	--color: #15518a;
+	--color2: rgb(10, 25, 30);
+	padding: 1rem 1.75rem;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 2px solid var(--color);
+	transition: 0.5s;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 1;
+	font-weight: 500;
+	font-size: 17px;
+	font-family: "Roboto", "Segoe UI", sans-serif;
+	text-transform: uppercase;
+	color: var(--color);
+}
+
+#visitProject::after,
+#visitProject::before {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	transform: skew(90deg) translate(-50%, -50%);
+	position: absolute;
+	inset: 50%;
+	left: 25%;
+	z-index: -1;
+	transition: 0.5s ease-out;
+	background-color: var(--color);
+}
+
+#visitProject::before {
+	top: -50%;
+	left: -25%;
+	transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#visitProject:hover::before {
+	transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#visitProject:hover::after {
+	transform: skew(45deg) translate(-50%, -50%);
+}
+
+#visitProject:hover {
+	color: white;
+}
+
+#visitProject:active {
+	filter: brightness(0.7);
+	transform: scale(0.98);
+}

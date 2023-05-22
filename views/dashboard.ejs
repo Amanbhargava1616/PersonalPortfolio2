@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+
+    <%- include('includes/head') %>
+
+        <!-- Boostrap JS -->
+        <script src="/scripts/bootstrap.bundle.min.js"></script>
+        <!-- <script src="/scripts/bootstrap.min.js"></script> -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles/dashboard.css">
+
+</head>
+
+<body>
+
+    <%- include("includes/header") %>
+
+        <main class="row">
+
+
+            <!-- side bar -->
+            <div class="side_bar col-lg-3">
+                <% for (project of projectArray){ %>
+                    <div class="<%= project.projectName %> icon_div" value="<%= project.url %>">
+
+                        <img src="<%= project.iconUrl %>" alt="" srcset="" class="icon_img">
+                        <%= project.projectName %>
+                    </div>
+                    <% } %>
+                        <div class="row mt-5">
+                            <a href="https://amanbhargava1616.github.io/Flitwebs/Calculator/" target="_blank"
+                                rel="noopener noreferrer" id="visitProjectAnchorTag">
+                                <button id="visitProject">Visit project</button>
+                            </a>
+                        </div>
+            </div>
+
+            <!-- project section -->
+            <div class="projects_section col-lg-9">
+
+                <iframe src="https://amanbhargava1616.github.io/Flitwebs/Calculator/" frameborder="0"
+                    class="project_display"></iframe>
+            </div>
+
+        </main>
+
+        <!-- script -->
+        <script src="/scripts/dashboard.js"></script>
+        <%- include("includes/contactForm.ejs") %>
+</body>
+
+</html>

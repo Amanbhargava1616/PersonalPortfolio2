@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= projectData.projectName %>
+    </title>
+
+
+    <%- include('includes/head') %>
+
+        <!-- Boostrap JS -->
+        <script src="/scripts/bootstrap.min.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles/project.css">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('includes/header') %>
+
+        <main class="container">
+            <div class="row">
+                <div class="col-lg-6 p-lg-5">
+                    <img src="<%= projectData.imageUrl %>" alt="<%= projectData.projectName %>"
+                        class="projectImage img-fluid" style="height:80vh;">
+                </div>
+                <div class="col-lg-6 p-lg-5 projectData">
+                    <h1 class="row projectName">
+                        <%= projectData.projectName %>
+                    </h1>
+                    <p class="row projectdescription">
+                        <%= projectData.description %>
+                    </p>
+
+                    <div class=" row techStack">
+
+
+                        <% for(tech of projectData.techStack) { %>
+                            <span class="techItem">
+                                <%= tech %>
+                            </span>
+                            &emsp;
+                            <% } %>
+                    </div>
+
+                    <div class="row mt-5">
+                        <a href="<%= projectData.url %>" target="_blank" rel="noopener noreferrer">
+                            <button id="visitProject">Visit project</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- contact form -->
+        <%- include('includes/contactForm') %>
+
+            <script src="/scripts/ContactForm.js"></script>
+
+</body>
+
+</html>
