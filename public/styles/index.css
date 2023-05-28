@@ -110,6 +110,12 @@ body {
 	text-shadow: 3px 3px 3px #000;
 }
 
+.landingPageIntroSection{
+	position: absolute;
+	top: 30%;
+	/* transform: translateY(50%); */
+}
+
 .introBodyText {
 	color: white;
 	font-size: 5vh;
